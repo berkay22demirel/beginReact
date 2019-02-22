@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FirstComponent from './components/FirstComponent';
 
 class App extends Component {
   render() {
+    var testVariable = "berkay22demirel.com";
+    var testVariable2 = true;
     return (
       <div className="App">
         <header className="App-header">
@@ -13,6 +16,9 @@ class App extends Component {
           </p>
           <h1>Berkay Demirel</h1>
           <div>Begin React</div>
+          <div>{testVariable2 ? testVariable.toUpperCase() : null}</div>
+          <FirstComponent />
+          <FirstComponent />
         </header>
       </div>
     );
