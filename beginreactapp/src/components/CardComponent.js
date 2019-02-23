@@ -1,22 +1,31 @@
 import React, { Component } from 'react'
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
 
 export default class CardComponent extends Component {
+  state = {
+    isVisible : false
+  }
+
+  onClickEvent =(e)=> {
+    this.setState({
+      isVisible : !this.state.isVisible
+    })
+  }
+
+
   render() {
       const {name,surname,job,salary} = this.props;
     return (
-        <Card className="my-3">
-            <Card.Header>Personnel</Card.Header>
-            <Card.Body>
-            <Card.Title>{name} {surname}</Card.Title>
-            <Card.Text>
-                <div>Job : {job}</div>
-                <div>Salary : {salary}</div>
-            </Card.Text>
-            <Button variant="primary">Details</Button>
-            </Card.Body>
-      </Card>
+        <div className="card my-3">
+            <div className="card-header" onClick = {this.onClickEvent} style={{cursor : "pointer"}}>{name} {surname}</div>
+            {this.state.isVisible ? 
+              <div className="card-body">
+                <div className="card-text">
+                    <div>Job : {job}</div>
+                    <div>Salary : {salary}</div>
+                </div>
+                  <div className="btn btn-outline-success mt-2">Details</div>
+            </div> : null}
+      </div>
     )
   }
 }
