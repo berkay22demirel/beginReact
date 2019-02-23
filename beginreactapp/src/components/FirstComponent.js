@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+
 
 export default class FirstComponent extends Component {
   render() {
@@ -9,3 +11,10 @@ export default class FirstComponent extends Component {
     )
   }
 }
+FirstComponent.propTypes = {
+  typetext : PropTypes.string.isRequired
+}
+FirstComponent.defaultProps = {
+  typetext : "Default Text"
+}
+

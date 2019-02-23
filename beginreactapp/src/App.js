@@ -20,7 +20,7 @@ class App extends Component {
           <div>Begin React</div>
           <div>{testVariable2 ? testVariable.toUpperCase() : null}</div>
           <FirstComponent typetext="text1"/>
-          <FirstComponent typetext="text2"/>
+          <FirstComponent/>
         </header>
       </div>
     );
