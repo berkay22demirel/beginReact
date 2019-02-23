@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function FunctionalComponent() {
+export default function FunctionalComponent(props) {
   return (
     <div>
-      NAVBAR
+      {props.navbar}
     </div>
   )
 }

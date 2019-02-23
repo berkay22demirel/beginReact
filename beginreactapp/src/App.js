@@ -10,7 +10,7 @@ class App extends Component {
     var testVariable2 = true;
     return (
       <div className="App">
-        <FunctionalComponent></FunctionalComponent>
+        <FunctionalComponent navbar="NAVBAR TEXT" />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
@@ -19,8 +19,8 @@ class App extends Component {
           <h1>Berkay Demirel</h1>
           <div>Begin React</div>
           <div>{testVariable2 ? testVariable.toUpperCase() : null}</div>
-          <FirstComponent />
-          <FirstComponent />
+          <FirstComponent typetext="text1"/>
+          <FirstComponent typetext="text2"/>
         </header>
       </div>
     );
