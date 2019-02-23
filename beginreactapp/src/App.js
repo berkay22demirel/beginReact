@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import FirstComponent from './components/FirstComponent';
 import FunctionalComponent from './components/FunctionalComponent';
+import CardComponent from './components/CardComponent';
 
 class App extends Component {
   render() {
@@ -22,6 +23,14 @@ class App extends Component {
           <FirstComponent typetext="text1"/>
           <FirstComponent/>
         </header>
+        <section id="personnel">
+          <div className="container">
+            <CardComponent name="Berkay" surname="Demirel" salary="10000$" job="Computer Engineer" />
+            <CardComponent />
+            <CardComponent name="Berkay" surname="Demirel" salary="10000$" job="Computer Engineer" />
+          </div>
+          
+        </section>
       </div>
     );
   }
